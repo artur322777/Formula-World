@@ -1,11 +1,209 @@
+
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <title>Моя тема</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formula World — річний проєкт про світ Формули-1, гонки та автомобільні технології.">
+    <title>Formula World — світ Формули-1</title>
+
+    <style>
+        :root {
+            --background: #101820;
+            --accent: #E10600;
+            --text: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--background);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        header {
+            margin-bottom: 45px;
+            border-left: 5px solid var(--accent);
+            padding-left: 20px;
+        }
+
+        .label {
+            color: var(--accent);
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: clamp(42px, 8vw, 76px);
+            font-weight: 900;
+            letter-spacing: -3px;
+            margin-bottom: 15px;
+        }
+
+        h1 span {
+            color: var(--accent);
+        }
+
+        .description {
+            max-width: 700px;
+            font-size: 17px;
+            line-height: 1.7;
+            color: #FFFFFF;
+        }
+
+        .section-title {
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        .card {
+            border: 1px solid var(--accent);
+            border-radius: 10px;
+            padding: 25px;
+            transition: background-color 0.2s ease;
+        }
+
+        .card:hover {
+            background-color: #E10600;
+        }
+
+        .card-number {
+            color: var(--accent);
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .card:hover .card-number {
+            color: #FFFFFF;
+        }
+
+        .card h3 {
+            font-size: 23px;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #FFFFFF;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--accent);
+            color: #FFFFFF;
+            font-size: 13px;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                letter-spacing: -2px;
+            }
+
+            header {
+                margin-bottom: 35px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-  <h1>Моя тема: космос</h1>
-  <p>Тут буде мій світ.</p>
+    <main class="container">
+
+        <header>
+            <div class="label">Річний навчальний проєкт</div>
+
+            <h1>FORMULA <span>WORLD</span></h1>
+
+            <p class="description">
+                Formula World — це проєкт, присвячений світу Формули-1.
+                Його мета — об'єднати автомобільні перегони, технології
+                та програмування в одному цифровому просторі.
+                Проєкт передбачає створення гри, Telegram-бота, сайту
+                та застосунку на автомобільну тематику.
+            </p>
+        </header>
+
+        <section>
+            <h2 class="section-title">Чотири напрямки проєкту</h2>
+
+            <div class="cards">
+
+                <article class="card">
+                    <div class="card-number">01 / GAME</div>
+                    <h3>Гра</h3>
+                    <p>
+                        Симулятор кар'єри гонщика з перегонами,
+                        автомобілями та розвитком команди.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <div class="card-number">02 / TELEGRAM</div>
+                    <h3>Бот</h3>
+                    <p>
+                        Telegram-бот із календарем перегонів,
+                        результатами та нагадуваннями про Гран-прі.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <div class="card-number">03 / WEBSITE</div>
+                    <h3>Сайт</h3>
+                    <p>
+                        Інформаційна платформа зі статистикою,
+                        командами, гонщиками та чемпіонатами.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <div class="card-number">04 / APP</div>
+                    <h3>Застосунок</h3>
+                    <p>
+                        Мобільний центр уболівальника для перегляду
+                        інформації про світ Формули-1.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <footer>
+            FORMULA WORLD · СВІТ ШВИДКОСТІ ТА ТЕХНОЛОГІЙ
+        </footer>
+
+    </main>
 </body>
 </html>
+
