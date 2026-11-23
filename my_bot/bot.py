@@ -1,4 +1,4 @@
-
+pip install pyTelegramBotAPI python-dotenv
 import os
 import telebot
 from dotenv import load_dotenv
